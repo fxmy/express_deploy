@@ -5,7 +5,9 @@
   {mod, { express_deploy_app, []}},
   {applications,
    [kernel,
-    stdlib
+    stdlib,
+    express_deploy_db,
+    n2o
    ]},
   {env,[]},
   {modules, []},
