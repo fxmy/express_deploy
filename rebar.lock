@@ -7,6 +7,7 @@
   {git,"git://github.com/ninenines/cowlib.git",
        {ref,"d544a494af4dbc810fc9c15eaf5cc050cced1501"}},
   2},
+ {<<"erlydtl">>,{pkg,<<"erlydtl">>,<<"0.12.1">>},0},
  {<<"express_deploy_db">>,
   {git,"git://github.com/fxmy/express_deploy_db.git",
        {ref,"977c2f9a149a4120e4e55fd08f9a28c24c22919f"}},
@@ -39,6 +40,7 @@
  {<<"worker_pool">>,{pkg,<<"worker_pool">>,<<"2.0.1">>},2}]}.
 [
 {pkg_hash,[
+ {<<"erlydtl">>, <<"3FDE3190D30340B10CFCFDB4135A828761D468DB4E4B34817C6B91D295F3142D">>},
  {<<"goldrush">>, <<"2024BA375CEEA47E27EA70E14D2C483B2D8610101B4E852EF7F89163CDB6E649">>},
  {<<"lager">>, <<"EEF4E18B39E4195D37606D9088EA05BF1B745986CF8EC84F01D332456FE88D17">>},
  {<<"quickrand">>, <<"47ADD4755CC5F209CBEFFD6F47C84061196CD7FAD99FD8FD12418EB0D06B939D">>},
