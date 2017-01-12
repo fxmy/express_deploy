@@ -28,7 +28,8 @@ start_link() ->
 
 %% Child :: {Id,StartFunc,Restart,Shutdown,Type,Modules}
 init([]) ->
-    {ok, { {one_for_all, 0, 1}, [children()]} }.
+  syn:init(),
+  {ok, { {one_for_all, 0, 1}, [children()]} }.
 
 %%====================================================================
 %% Internal functions

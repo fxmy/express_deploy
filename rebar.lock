@@ -22,6 +22,10 @@
        {ref,"20076d0d7267a593e03d538d14f52fb2c6149609"}},
   1},
  {<<"lager">>,{pkg,<<"lager">>,<<"3.2.1">>},2},
+ {<<"mad">>,
+  {git,"git://github.com/synrc/mad",
+       {ref,"2c1413039e065dc8cc4d3c5a3b1ae3748a3644bd"}},
+  0},
  {<<"n2o">>,
   {git,"git://github.com/synrc/n2o.git",
        {ref,"909d8bd90bbc432e6f3ae60dd20d9616185a7ef6"}},
@@ -35,7 +39,12 @@
   {git,"git://github.com/ninenines/ranch.git",
        {ref,"adf1822defc2b7cfdc7aca112adabfa1d614043c"}},
   2},
+ {<<"sh">>,
+  {git,"git://github.com/synrc/sh",
+       {ref,"5b3fb0a2499599af194ecc381499a7da016132ea"}},
+  1},
  {<<"sumo_db">>,{pkg,<<"sumo_db">>,<<"0.7.1">>},1},
+ {<<"syn">>,{pkg,<<"syn">>,<<"1.6.0">>},0},
  {<<"uuid">>,{pkg,<<"uuid_erl">>,<<"1.5.2-rc1">>},2},
  {<<"worker_pool">>,{pkg,<<"worker_pool">>,<<"2.0.1">>},2}]}.
 [
@@ -45,6 +54,7 @@
  {<<"lager">>, <<"EEF4E18B39E4195D37606D9088EA05BF1B745986CF8EC84F01D332456FE88D17">>},
  {<<"quickrand">>, <<"47ADD4755CC5F209CBEFFD6F47C84061196CD7FAD99FD8FD12418EB0D06B939D">>},
  {<<"sumo_db">>, <<"443587FEEE9E6532172039B9C44B38829CB06225ECD10EE05B62CFF14FF570BD">>},
+ {<<"syn">>, <<"11EDF63C417FA7D4EA95EA9B1C2F64CFC1A81FF5D852916860FA41CD95160445">>},
  {<<"uuid">>, <<"D4022AB3F4F1A28E86EA15D4075CB0C57EC908D8AF1CA2E8AF28AA815EF93C3A">>},
  {<<"worker_pool">>, <<"B90273074898FA89434317991E00884DBBAFFAB5BFD964A7586317CD16FB18D4">>}]}
 ].
