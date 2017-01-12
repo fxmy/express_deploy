@@ -4,12 +4,23 @@
 -include_lib("n2o/include/wf.hrl").
 
 main() ->
+  {{A, B, C, D}, _Port} = wf:peer(?REQ),
+  Ip = integer_to_list(A) ++ "." ++
+       integer_to_list(B) ++ "." ++
+       integer_to_list(C) ++ "." ++
+       integer_to_list(D),
+  {User, Pass} = case express_deploy_db:get_by_ip(Ip) of
+                   notfound ->
+                     {<<"未找到，请联系管理员"/utf8>>, <<"未找到，请联系管理员"/utf8>>};
+                   {U, P} ->
+                     {U, P}
+                 end,
   #dtl{file="index",
        app=express_deploy,
        bindings=[{title, title()},
-                 {ed_ip, ed_ip()},
-                 {ed_username, ed_username()},
-                 {ed_password, ed_password()},
+                 {ed_ip, ed_ip(Ip)},
+                 {ed_username, ed_username(User)},
+                 {ed_password, ed_password(Pass)},
                  {javascript, (?MODULE:(wf:config(n2o,mode,dev)))()}
                 ]
       }.
@@ -19,16 +30,18 @@ dev()  -> [ [ #script{src=lists:concat(["/n2o/protocols/",X,".js"])} || X <- [be
             [ #script{src=lists:concat(["/n2o/",Y,".js"])}           || Y <- [bullet,n2o,ftp,utf8,validation] ] ].
 
 title() ->
-    "233333333".
+  wf:config(express_deploy, index_title, "2333").
 
-ed_ip() ->
-  <<"吃特啊"/utf8>>.
+ed_ip(Ip) ->
+  wf:to_binary([<<"您的IP地址:"/utf8>>, Ip]).
 
-ed_username() ->
-  <<"吃特啊"/utf8>>.
+ed_username(UserName) ->
+  wf:to_binary([<<"您的用户名:"/utf8>>,
+                UserName]).
 
-ed_password() ->
-  <<"吃特啊"/utf8>>.
+ed_password(Password) ->
+  wf:to_binary([<<"您的密码:"/utf8>>,
+                Password]).
 
 event(Event) ->
   wf:info(?MODULE,"Event: ~p", [Event]),
