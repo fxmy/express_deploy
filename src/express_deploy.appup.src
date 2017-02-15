@@ -1,0 +1,18 @@
+{"0.1.1",
+  [ {"0.1.0", [
+               {load_module, config},
+               {load_module, index},
+               {load_module, index_view},
+               {load_module, n2o_document}
+               ]
+    }
+  ],
+  [ {"0.1.0", [
+               {load_module, config},
+               {load_module, index},
+               {load_module, index_view},
+               {load_module, n2o_document}
+               ]
+    }
+  ]
+}.
