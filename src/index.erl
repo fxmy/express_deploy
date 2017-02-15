@@ -18,6 +18,7 @@ main() ->
   #dtl{file="index",
        app=express_deploy,
        bindings=[{title, title()},
+                 {prompt, prompt()},
                  {client_uri, client_uri()},
                  {ed_ip, ed_ip(Ip)},
                  {ed_username, ed_username(User)},
@@ -32,6 +33,9 @@ dev()  -> [ [ #script{src=lists:concat(["/n2o/protocols/",X,".js"])} || X <- [be
 
 title() ->
   wf:config(express_deploy, index_title, "2333").
+
+prompt() ->
+  wf:config(express_deploy, index_prompt, <<"网络正常，请按照以下账户进行拨号认证！"/utf8>>).
 
 client_uri() ->
   wf:config(express_deploy, client_uri, "http://baidu.com").

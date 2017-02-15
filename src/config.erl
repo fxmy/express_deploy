@@ -1,7 +1,7 @@
 -module(config).
 -compile(export_all).
 
-log_level() -> info.
+log_level() -> warning.
 log_modules() -> % any
   [
 %    wf_convert,

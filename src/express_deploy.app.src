@@ -1,6 +1,6 @@
 {application, express_deploy,
- [{description, "An OTP application"},
-  {vsn, "0.1.0"},
+ [{description, "ExpressDeploy for me"},
+  {vsn, "0.1.1"},
   {registered, []},
   {mod, { express_deploy_app, []}},
   {applications,
